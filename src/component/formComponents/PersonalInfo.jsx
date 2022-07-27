@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import styles from "../../styles/formStyle.module.css";
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useFormContext } from "react-hook-form";
@@ -29,9 +28,6 @@ const PersonalInfo = () => {
                 {errors.age && <small style={{ color: "red" }}>{errors.age.message}</small>}
             </Box>
 
-            {/* <Typography textAlign={'center'} marginTop={2}>
-                <Link to="/ContactForm">Next</Link>
-            </Typography> */}
         </section>
     )
 }

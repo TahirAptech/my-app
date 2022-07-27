@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import styles from "../../styles/formStyle.module.css";
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useFormContext } from "react-hook-form";
@@ -24,10 +23,6 @@ const AddressForm = () => {
                 <TextField label="City Name" fullWidth {...register("city", { required: true })} />
                 {errors.city && <small style={{ color: "red" }}>City Name is required</small>}
             </Box>
-
-            {/* <Typography textAlign={'center'} marginTop={2}>
-                <Link to="/ContactForm">Previous</Link>
-            </Typography> */}
         </section>
     )
 }

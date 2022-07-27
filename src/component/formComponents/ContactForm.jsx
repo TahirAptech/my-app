@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import styles from "../../styles/formStyle.module.css";
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useForm, useFormContext } from "react-hook-form";
@@ -26,11 +25,6 @@ const ContactForm = () => {
             <Box marginBottom={2}>
                 <TextField type={'number'} label="Alternate Phone Number" fullWidth {...register("alternatePhone")} />
             </Box>
-            {/* 
-            <Typography textAlign={'center'} marginTop={2}>
-                <Link to="/PersonalInfo">Previous</Link> &nbsp;
-                <Link to="/AddressForm">Next</Link>
-            </Typography> */}
         </section>
     )
 }
