@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { FormProvider, useForm } from "react-hook-form";
+import { Route } from "react-router-dom";
+import { BrowserRouter, Router, Routes } from "react-router-dom";
+import RegistraionForm from "./screens/RegistraionForm";
+// import Autocompletes from "./component/Autocompletes";
+// import AddressForm from '../component/formComponents/AddressForm';
+// import ContactForm from '../component/formComponents/ContactForm';
+// import PersonalInfo from '../component/formComponents/PersonalInfo';
 
 function App() {
+  const useFormMethods = useForm();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //#region Router
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<RegistraionForm />} />
+    //     <Route path="/ContactForm" element={<ContactForm />} />
+    //     <Route path="/AddressForm" element={<AddressForm />} />
+    //     <Route path="/PersonalInfo" element={<PersonalInfo />} />
+    //   </Routes>
+    // </BrowserRouter>
+    //#endregion
+
+    <FormProvider {...useFormMethods}>
+      <RegistraionForm />
+    </FormProvider>
   );
 }
 
